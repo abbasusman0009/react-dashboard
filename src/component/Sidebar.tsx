@@ -1,5 +1,5 @@
 import React from 'react'
-
+import logo from '../assets/images/logo.svg'
 export const Sidebar = () => {
   const [userDropdown, setDropdown] = React.useState(false)
   
@@ -10,11 +10,11 @@ export const Sidebar = () => {
   return (
     <div>
       <div
-  className="relative flex h-full w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+  className="relative z-10 flex h-[100%] w-full max-w-[18rem] flex-col rounded-xl bg-[#B7FFDB21] bg-opacity-[13%]  bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
   <div className="flex items-center gap-4 p-4 mb-2">
-    <img src="https://docs.material-tailwind.com/img/logo-ct-dark.png" alt="brand" className="w-8 h-8" />
-    <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-      Sidebar
+    <img src={logo} alt="brand" className="w-10 h-10" />
+    <h5 className="block font-sans text-[#158B51] text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+      Travel Plus
     </h5>
   </div>
   <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
@@ -22,7 +22,7 @@ export const Sidebar = () => {
       <div role="button"
         className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
         <button type="button"
-          className="flex items-center justify-between w-full p-3 font-sans text-xl antialiased font-semibold leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900">
+          className="flex  items-center justify-between w-full p-3 font-sans text-xl antialiased font-semibold leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900">
           <div className="grid mr-4 place-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
               className="w-5 h-5">
@@ -31,7 +31,7 @@ export const Sidebar = () => {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <p className="block mr-auto font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900">
+          <p className="block mr-auto font-sans active:bg-[] text-base antialiased font-normal leading-relaxed text-blue-gray-900">
             Dashboard
           </p>
         </button>
@@ -87,25 +87,7 @@ export const Sidebar = () => {
           </nav>
         </div>
       </div>
-    </div>
-    <div role="button"
-      className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-      <div className="grid mr-4 place-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-          className="w-5 h-5">
-          <path fill-rule="evenodd"
-            d="M6.912 3a3 3 0 00-2.868 2.118l-2.411 7.838a3 3 0 00-.133.882V18a3 3 0 003 3h15a3 3 0 003-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0017.088 3H6.912zm13.823 9.75l-2.213-7.191A1.5 1.5 0 0017.088 4.5H6.912a1.5 1.5 0 00-1.434 1.059L3.265 12.75H6.11a3 3 0 012.684 1.658l.256.513a1.5 1.5 0 001.342.829h3.218a1.5 1.5 0 001.342-.83l.256-.512a3 3 0 012.684-1.658h2.844z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      Inbox
-      <div className="grid ml-auto place-items-center justify-self-end">
-        <div
-          className="relative grid items-center px-2 py-1 font-sans text-xs font-bold uppercase rounded-full select-none whitespace-nowrap bg-blue-gray-500/20 text-blue-gray-900">
-          <span className="">14</span>
-        </div>
-      </div>
-    </div>
+    </div>  
     <div role="button"
       className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
       <div className="grid mr-4 place-items-center">
@@ -116,7 +98,7 @@ export const Sidebar = () => {
             clip-rule="evenodd"></path>
         </svg>
       </div>
-      Profile
+      Ride Management
     </div>
     <div role="button"
       className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
@@ -128,7 +110,7 @@ export const Sidebar = () => {
             clip-rule="evenodd"></path>
         </svg>
       </div>
-      Settings
+      Financial
     </div>
     <div role="button"
       className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
